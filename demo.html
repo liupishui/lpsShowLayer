@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<img src="1.jpg" alt="顶顶顶顶顶顶顶顶顶顶"/>
+<input type="button" id="demoIframe" value="示例iframe" />
+<input type="button" id="demoHtml" value="示例html" />
+<div id="lpstest">
+	dfdafda
+</div>
+</body>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="lpsshowlayer.min.js.js"></script>
+<script>
+$(function(){
+    console.log($.lpsShowLayer);
+	$("img").click(function(){$(this).lpsShowLayer({
+		title           :"nihao",
+		titleStyle      :"position:absolute;bottom:0;background:#fff;",
+		closeBtnStyle   :"border-radius:11px;",
+		layerCoverStyle :"display:none;",
+		drag            :true,
+		stretch         :false,
+		resize          :true
+		 });
+	})
+	$("#demoIframe").click(function(){$(this).lpsShowLayer({
+		type          :"iframe",
+		address       :"http://www.baidu.com"
+		})
+	})
+	$("#demoHtml").click(function(){$(this).lpsShowLayer({
+		html         :"<div style='font:100px/150px Simsun;'>拉瓜哥也有春天<div><script>alert(1);<\/script>",
+		layerCoverStyle:"display:none;",
+		drag         :true,
+		resize       :true
+		})
+	})
+})
+</script>
+</html>
